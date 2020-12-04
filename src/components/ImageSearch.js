@@ -5,6 +5,7 @@ const ImageSearch = ({searchText}) => {
   const onSubmit = (e) => {
     e.preventDefault();
     searchText(text);
+    setText('');
   }
   return (
     <form onSubmit={onSubmit}  className="flex flex-row	justify-center items-center">
@@ -16,6 +17,7 @@ const ImageSearch = ({searchText}) => {
           aria-describedby="searchHelp"
           placeholder="Search Image Term ....... "
           onChange={(e)=>setText(e.target.value)}
+          value={text}
         />
       </div>
       <button type="submit" className="btn btn-primary mt-3">

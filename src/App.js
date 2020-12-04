@@ -30,7 +30,7 @@ axios.get(`https://pixabay.com/api/?key=${REACT_APP_PIXABAY_API_KEY}
          height={100}
          width={65}/>
          </div>:
-   <div className="grid grid-cols-3 gap-4">
+   <div className="grid md:grid-cols-3 gap-4 sm:grid-cols-1">
 {images.map(image=>
 <ImageCard key={image.id} image={image}/>
 
